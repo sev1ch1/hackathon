@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #1c1e23;
+    color: #e6e3d1;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    background-color: #232C33; 
+    font-family: "Raleway", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 1920px;
+    height: 915px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.back-btn {
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: #e6e3d1;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    margin: 20px 0;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 1500px;
+    background-color: #20272E;
+    border-radius: 18px;
+}
+
+.image-section {
+    flex: 1;
+    text-align: center;
+    overflow: hidden;
+    height: 200px;
+    margin-right: 100px;   
+    padding: 0; /* Убрали отступы */
+}
+
+.image-placeholder {
+    max-width: 315px;
+    height: 315px;
+    object-fit: cover;
+
+    border-radius: 16px;
+}
+
+.comments-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 20px;
+    max-width: 430px;
+    margin-right: 100px;
+}
+
+.comment {
+    position: relative; /* Позволяет использовать абсолютное позиционирование для псевдоэлемента */
+    background-color: #333; /* Цвет фона */
+    padding: 20px; /* Увеличиваем внутренние отступы */
+    border-radius: 18px; /* Закругление углов */
+    margin-bottom: 10px; /* Отступ между комментариями */
+    text-align: center; /* Центрирование текста */
+    border: 2px solid #e6e3d1; /* Цвет границы */
+    min-height: 120px; /* Увеличиваем минимальную высоту строки */
+    color: #e6e3d1; /* Цвет текста по умолчанию (не прозрачный) */
+    display: flex; /* Используем flexbox для центрирования */
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    line-height: 1.5; /* Высота строки для лучшей читабельности */
+    width: 100%; /* Устанавливаем ширину на 100% */
+    max-width: 600px; /* Максимальная ширина для предотвращения слишком широкой строки */
+    overflow: hidden; /* Скрытие переполнения */
+    white-space: normal; /* Позволяет переносу текста */
+    font-size: 24px; /* Увеличиваем размер шрифта для текста */
+}
+
+.comment::before {
+    content: "Сделайте круто класс сайт"; /* Фоновый текст */
+    position: absolute; /* Абсолютное позиционирование */
+    top: 50%; /* Центрируем по вертикали */
+    left: 50%; /* Центрируем по горизонтали */
+    transform: translate(-50%, -50%); /* Перемещаем на половину ширины и высоты для центрирования */
+    font-size: 24px; /* Адаптивное увеличение шрифта */
+    color: rgba(230, 227, 209, 0.5); /* Полупрозрачный цвет для фона */
+    pointer-events: none; /* Чтобы фон не мешал вводить текст */
+    white-space: nowrap; /* Запрет переноса текста */
+}
+
+
+.comment[contenteditable="true"]:empty:before {
+    content: "Сделайте круто класс сайт";
+    visibility: visible;
+    color: rgba(230, 227, 209, 0.3);
+    white-space: nowrap; /* Запрет переноса текста */
+}
+
+.comment.has-content::before {
+    visibility: hidden; 
+}
+
+.comment:nth-child(2)::before {
+    white-space: nowrap; /* Запрет переноса текста */
+    content: "Сделайте ваще оч круто класс сайт";
+}
+
+.contacts {
+    width: 100%;
+border: 2px solid #C2BCA2 ;
+border-radius: 18px;
+}
+
+.contacts table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: calc(1rem + 1vw);
+    color: #C2BCA2;
+}
+
+.contacts th, .contacts td {
+    padding: 15px;
+    text-align: center;
+    padding-right: 75px;
+    padding-left: 25px;
+
+}
+
+.contacts a {
+    color: #C2BCA2;
+    text-decoration: none;
+}
+
+.contacts .icon {
+    margin-right: 15px;
+    font-size: 2rem;
+}
+
+.profile-btn {
+    background-color: #333;
+    color: #e6e3d1;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: calc(1rem + 1vw);
+    border: 2px solid #C2BCA2;
+}
+
+.profile-btn:hover {
+    background-color: #444;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Статус заказа</title>
+    <link rel="stylesheet" href="status.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="orderMenager.html" class="back-btn">&larr;</a>
+            <h1>Статус заказа</h1>
+        </header>
+
+        <div class="content-wrapper">
+            <div class="image-section">
+                <img src="./icon/status.svg" alt="Image" class="image-placeholder">
+            </div>
+
+            <div class="comments-section">
+                <div class="comment" contenteditable="true"></div>
+                <div class="comment" contenteditable="true"></div>
+            </div>
+        </div>
+
+        <div class="contacts">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Имя</th>
+                        <th>Роль</th>
+                        <th>Связь</th>
+                        <th>Профиль</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Дмитрий Накиев</td>
+                        <td>Менеджер</td>
+                        <td>
+                            <a href="#" class="icon">💬</a>
+                            <a href="#" class="icon">📞</a>
+                        </td>
+                        <td><button class="profile-btn">Открыть</button></td>
+                    </tr>
+                    <tr>
+                        <td>Дмитрий Накиев</td>
+                        <td>Дизайнер</td>
+                        <td>
+                            <a  href="#" class="icon">💬</a>
+                            <a href="#" class="icon">📞</a>
+                        </td>
+                        <td><button class="profile-btn">Открыть</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.comment').forEach(function(comment) {
+            comment.addEventListener('input', function() {
+                if (this.innerText.trim() !== '') {
+                    this.classList.add('has-content');
+                } else {
+                    this.classList.remove('has-content');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

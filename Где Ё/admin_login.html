@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Войти</title>
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Raleway", serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            font-style: normal;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url(images/background.png) no-repeat center center;
+            background-color: #161616;
+            background-size: cover;            
+        }
+
+        .container {
+            background-color: #C2BCA2;
+            border-radius: 30px;
+            padding: 20px;
+            width: 336px;
+            height: auto;
+        }
+
+        h1 {
+            padding-top: 15px;
+            padding-bottom: 20px;
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #000;
+            text-align: left; 
+        }
+
+        .subtext {
+            font-size: 14px;
+            margin-bottom: 20px;
+            color: #000;
+        }
+
+        .subtext a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .input-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            border: 2px solid #000;
+            border-radius: 20px;
+            padding: 10px;
+            background-color: #C2BCA2;
+        }
+
+        .input-container img {
+            width: 20px;
+            margin-right: 10px;
+        }
+
+        input {
+            border: none;
+            background: none;
+            outline: none;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .login-btn {
+            background-color: #232C33;
+            color: #C2BCA2;
+            border: none;
+            border-radius: 20px;
+            padding: 10px;
+            margin-top: 20px;
+            width: 100%;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .login-btn:hover {
+            background-color: #16222a;
+        }
+
+        .login-btn:active {
+            background-color: #0f171d; 
+        }
+
+        .forgot-password {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .forgot-password a {
+            color: #4552B8;
+            text-decoration: none;
+        }
+
+        /* Фиксированный размер фрейма */
+        .frame {
+            width: 1920px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="frame">
+        <div class="container">
+            <h1>Войти</h1>
+            <div class="input-container">
+                <img src="https://img.icons8.com/material-outlined/24/000000/new-post.png" alt="Почта">
+                <input type="text" placeholder="Почта" id="email">
+            </div>
+            <div class="input-container">
+                <img src="https://img.icons8.com/material-outlined/24/000000/lock--v1.png" alt="Пароль">
+                <input type="password" placeholder="Пароль" id="password">
+            </div>
+            <button class="login-btn">Войти</button>
+            <div class="forgot-password">
+                <a href="#">Забыли пароль?</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.login-btn').addEventListener('click', () => {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            if (email && password) {
+                alert(`Вы вошли с почтой: ${email}`);
+            } else {
+                alert('Пожалуйста, введите почту и пароль');
+            }
+        });
+    </script>
+</body>
+</html>

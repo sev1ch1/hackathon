@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>questionnaire</title>
+    <link rel="stylesheet" href="questionnaire.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <h2>Where is E?</h2>
+            </div>
+            <p>Пройдите опрос и наш менеджер скажет вам<br> примерную цену и подберет команду,<br> которая подходит именно Вам</p>
+            <div class="arrow">↓</div>
+        </div>
+
+        <form id="surveyForm">
+            <div class="question">
+                <label for="siteType">Какой сайт Вам нужен?</label>
+                <div class="options">
+                    <input type="radio" id="corporate" name="siteType" value="corporate">
+                    <label for="corporate">Оперативный лендинг/корпоративный сайт</label>
+
+                    <input type="radio" id="ecommerce" name="siteType" value="ecommerce">
+                    <label for="ecommerce">Сайт с каталогом и корзиной</label>
+
+                    <input type="radio" id="portal" name="siteType" value="portal">
+                    <label for="portal">Интернет-магазин/портал</label>
+
+                    <input type="radio" id="other" name="siteType" value="other">
+                    <label for="other">Только реклама</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <label for="company">Чем занимается Ваша компания?</label>
+                <textarea id="company" name="company" rows="3" placeholder="Напишите здесь"></textarea>
+            </div>
+
+            <div class="question">
+                <label for="features">Опишите желаемые функциональные особенности системы</label>
+                <textarea id="features" name="features" rows="5" placeholder="Напишите здесь"></textarea>
+            </div>
+
+            <div class="question">
+                <label for="developmentStart">Когда планируете начать разработку?</label>
+                <div class="options">
+                    <input type="radio" id="immediate" name="developmentStart" value="immediate">
+                    <label for="immediate">Чем быстрее, тем лучше</label>
+
+                    <input type="radio" id="twoWeeks" name="developmentStart" value="twoWeeks">
+                    <label for="twoWeeks">Обсудим в течении 2-х недель</label>
+
+                    <input type="radio" id="notSure" name="developmentStart" value="notSure">
+                    <label for="notSure">Пока не знаю</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <label for="budget">Каков ваш примерный бюджет на разработку сайта?</label>
+                <div class="options">
+                    <input type="radio" id="less500" name="budget" value="less500">
+                    <label for="less500">до 50 тыс руб.</label>
+
+                    <input type="radio" id="500to700" name="budget" value="500to700">
+                    <label for="500to700">50-100 тыс руб.</label>
+
+                    <input type="radio" id="700to900" name="budget" value="700to900">
+                    <label for="700to900">100-500 тыс руб.</label>
+
+                    <input type="radio" id="900to1M" name="budget" value="900to1M">
+                    <label for="900to1M">500 тыс - 1 млн руб.</label>
+
+                    <input type="radio" id="above1M" name="budget" value="above1M">
+                    <label for="above1M">более 1 млн руб.</label>
+                </div>
+            </div>
+
+            <button type="button" id="submitBtn">Отправить</button>
+        </form>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <p>Форма отправлена!</p>
+            <button id="closeModalBtn">Закрыть</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

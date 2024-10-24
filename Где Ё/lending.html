@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where is Ё?</title>
+    <link rel="stylesheet" href="lending.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.svg" alt="Where is Ё?">
+        </div>
+        <nav>
+            <ul class="head_button">
+                <li><a href="#projects">Главная</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#values">Наши ценности</a></li>
+            </ul>
+        </nav>
+        <a href="#" id="loginBtn" class="login-btn">Вход</a>
+    </header>
+
+    <section id="projects" class="hero">
+        <h1>Where is Ё?</h1>
+        <p>Создаем цифровые решения для вашего успеха!</p>
+        <a href="#" id="orderBtn" class="cta-btn">Оформить заказ</a>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-content">
+            <img src="images/logo.svg" alt="WRЁ Logo">
+            <div class="about-content-text">
+                <h2>О нас</h2>
+                <p>Мы специализируемся на разработке современных и эффективных веб-сайтов, а также на создании CRM и ERP систем, которые помогают бизнесам оптимизировать свои процессы и достигать новых высот.</p>
+                <p>Наша команда состоит из опытных разработчиков, дизайнеров и бизнес-аналитиков, которые работают в тесном сотрудничестве с клиентами, чтобы понять их уникальные потребности и предложить индивидуальные решения.</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="values" class="values">
+        <div class="left-side">
+            <h1>Where is<br><span>Ё?</span></h1>
+            <p>Мы верим, что<br> каждый бизнес<br> уникален, и поэтому<br> подходим к каждому<br> проекту с учетом<br> специфики и целей<br> наших клиентов.</p>
+        </div>
+        <div class="right-side">
+            <h2>Наши ценности</h2>
+            <ul>
+                <li>Качество: Мы стремимся к высокому качеству во всем, что мы делаем. Наша цель — создавать продукты, которые не только соответствуют, но и превосходят ожидания клиентов.</li>
+                <li>Индивидуальный подход: Мы понимаем, что каждая компания имеет свои особенности, и поэтому разрабатываем решения, которые идеально подходят именно вам.</li>
+                <li>Инновации: Мы следим за последними тенденциями в сфере технологий и активно внедряем их в наши проекты, чтобы обеспечить нашим клиентам конкурентные преимущества.</li>
+                <li>Поддержка: Наша работа не заканчивается с завершением проекта. Мы предоставляем полную техническую поддержку и обучение, чтобы вы могли максимально эффективно использовать наши решения.</li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="portfolio">
+        <h2>Вместо тысячи слов</h2>
+        <p>Примеры разработанных сайтов:</p>
+        <div class="portfolio-grid">
+            <img src="images/1.png" alt="Пример сайта 1">
+            <img src="images/2.png" alt="Пример сайта 2">
+            <img src="images/3.png" alt="Пример сайта 3">
+            <img src="images/4.png" alt="Пример сайта 4">
+        </div>
+    </section>
+
+    <!-- Модалка -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h1>Кем вы являетесь?</h1>
+            <button class="role-btn" data-role="Администратор">Администратор</button>
+            <button class="role-btn" data-role="Менеджер проекта">Менеджер проекта</button>
+            <button class="role-btn" data-role="Клиент">Клиент</button>
+            <button class="continue-btn">Продолжить</button>
+        </div>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="footer-content">
+            <div class="contacts">
+                <h3>Контакты</h3>
+                <p>Наш адрес:<br> г. Москва, ул. Примерная, д. 10, офис 25</p>
+                <p>Телефон:<br> <a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+                <p>Email:<br> <a href="mailto:info@webdesignmasterclass.ru">info@webdesignmasterclass.ru</a></p>
+            </div>
+            <div class="socials">
+                <h3>Мы в соц. сетях:</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="images/insta.png" alt="Instagram"></a>
+                    <a href="#"><img src="images/telegram.png" alt="Telegram"></a>
+                    <a href="#"><img src="images/vk.png" alt="VK"></a>
+                    <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>
+                <a href="#">Политика конфиденциальности</a> |
+                <a href="#">Центр безопасности и конфиденциальности</a> |
+                <a href="#">Лицензии</a>
+            </p>
+            <p>©2024 SZN.</p>
+        </div>
+    </footer>
+
+    <script src="lending.js"></script>
+</body>
+</html>

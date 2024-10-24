@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <style>
+         
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Raleway", serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            font-style: normal;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url(images/background.png) no-repeat center center;
+            background-color: #161616;
+            background-size: cover;
+            
+        }
+
+        .container {
+            padding: 20px;
+            background-color: #C2BCA2;
+            border-radius: 30px;
+            padding: 20px;
+            width: 336px;
+            height: auto;
+            
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #000;
+            text-align: left; 
+            
+        }
+
+        .subtext {
+            font-size: 14px;
+            margin-bottom: 20px;
+            color: #000;
+            
+        }
+
+        .subtext a {
+            color: #4552B8;
+            text-decoration: none;
+            
+        }
+
+        .input-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            border: 2px solid #000;
+            border-radius: 20px;
+            padding: 10px;
+            background-color: #C2BCA2;
+        }
+
+        .input-container img {
+            width: 20px;
+            margin-right: 10px;
+        }
+
+        input {
+            border: none;
+            background: none;
+            outline: none;
+            width: 100%;
+            font-size: 16px;
+            
+        }
+
+        .register-btn {
+            background-color: #232C33;
+            color: #C2BCA2;
+            border: none;
+            border-radius: 20px;
+            padding: 10px;
+            margin-top: 20px;
+            width: 100%;
+            font-size: 16px;
+            cursor: pointer;
+            
+        }
+
+        .register-btn:hover {
+            background-color: #16222a;
+        }
+
+        .register-btn:active {
+            background-color: #0f171d; 
+        }
+
+        /* Фиксированный размер фрейма */
+        .frame {
+            width: 1920px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="frame">
+        <div class="container">
+            <h1>Регистрация</h1>
+            <div class="subtext">
+                Уже есть аккаунт? <a href="client_login.html">Войти</a>
+            </div>
+            <div class="input-container">
+                <img src="https://img.icons8.com/material-outlined/24/000000/new-post.png" alt="Почта">
+                <input type="text" placeholder="Почта" id="email">
+            </div>
+            <div class="input-container">
+                <img src="https://img.icons8.com/material-outlined/24/000000/lock--v1.png" alt="Пароль">
+                <input type="password" placeholder="Пароль" id="password">
+            </div>
+            <div class="input-container">
+                <img src="https://img.icons8.com/material-outlined/24/000000/lock--v1.png" alt="Повторите пароль">
+                <input type="password" placeholder="Повторите пароль" id="confirm-password">
+            </div>
+            <a href="profileClient.html"> 
+            <button class="register-btn">Зарегистрироваться</button>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.register-btn').addEventListener('click', () => {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+
+            if (email && password && confirmPassword) {
+                if (password === confirmPassword) {
+                    alert(`Регистрация успешна с почтой: ${email}`);
+                } else {
+                    alert('Пароли не совпадают');
+                }
+            } else {
+                alert('Пожалуйста, заполните все поля');
+            }
+        });
+    </script>
+</body>
+</html>

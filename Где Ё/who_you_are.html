@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выбор роли</title>
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url(images/background.png) no-repeat center center;
+            background-color: #161616;
+            background-size: cover;
+            font-family: "Raleway", serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .modal-content {
+            background-color: #C2BCA2;
+            border-radius: 30px;
+            padding: 20px;
+            width: 336px;
+            height: 360px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #000;
+            padding-bottom: 25px;
+            padding-top: 15px;
+        }
+
+        button:active {
+        background-color: #cccccc; 
+}
+
+
+        button {
+            border-radius: 20px;
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 15px 0;
+            background-color: #C2BCA2;
+            border: 2px solid #000;
+            font-size: 16px;
+            cursor: pointer;
+            font-family: "Raleway", serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            font-style: normal;
+            
+        }
+
+        button:hover {
+            background-color: #cecec4;
+        }
+
+        .continue-btn {
+            background-color: #232C33;
+            color: #C2BCA2;
+            border: none;
+            margin-top: 30px;
+            font-family: "Raleway", serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .continue-btn:hover {
+            background-color: #16222a;
+        }
+
+        /* Фиксированный размер фрейма */
+        .frame {
+            width: 1920px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="frame">
+        <div class="container">
+            <h1>Кем вы являетесь?</h1>
+            <button class="role-btn" data-role="Администратор">Администратор</button>
+            <button class="role-btn" data-role="Менеджер проекта">Менеджер проекта</button>
+            <button class="role-btn" data-role="Клиент">Клиент</button>
+            <button class="continue-btn">Продолжить</button>
+        </div>
+    </div>
+
+    <script>
+        const roleButtons = document.querySelectorAll('.role-btn');
+        let selectedRole = '';
+
+        roleButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                selectedRole = button.getAttribute('data-role');
+                alert(`Вы выбрали роль: ${selectedRole}`);
+            });
+        });
+
+        document.querySelector('.continue-btn').addEventListener('click', () => {
+            if (selectedRole) {
+                alert(`Вы продолжаете с ролью: ${selectedRole}`);
+            } else {
+                alert('Пожалуйста, выберите роль!');
+            }
+        });
+    </script>
+</body>
+</html>

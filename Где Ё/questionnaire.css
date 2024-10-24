@@ -1,0 +1,187 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+
+body {
+    font-family: "Raleway", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    background-color: #232C33; 
+    color: #C2BCA2; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.container {
+    width: 600px;
+    padding: 30px;
+    background-color: #232C33; 
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.header p {
+    font-size: 18px;
+}
+
+.arrow {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+form {
+    margin-top: 60px;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+.question label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 20px;
+    padding-right: 30px;
+    
+}
+
+textarea, input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #C2BCA2;
+    border-radius: 10px;
+    resize: none;
+
+}
+
+textarea::placeholder, input::placeholder {
+    color: #232C33;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    background-color: #232C33;
+    color: #C2BCA2;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.options label {
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 5px;
+    margin-bottom: 8px;
+    padding: 5px;
+    
+}
+
+.options input[type="radio"] {
+    margin-left: 50px;
+    margin-right: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #C2BCA2; 
+    color: #292929; 
+    font-size: 16px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #d4d4bb;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px); /* Размытие фона */
+}
+
+.modal-content {
+    background-color: #292929;
+    color: #E5E2CF;
+    margin: 20% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+#closeModalBtn {
+    margin-top: 20px;
+    background-color: #E5E2CF;
+    color: #292929;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Скрываем стандартные радиокнопки */
+.options input[type="radio"] {
+    display: none;
+}
+
+/* Стилизация контейнера для каждого ответа */
+.options label {
+    position: relative;
+    padding-left: 30px; /* Отступ для квадрата слева */
+    cursor: pointer;
+    display: block; /* Обеспечиваем, чтобы каждая опция занимала всю строку */
+}
+
+/* Квадратный блок перед текстом */
+.options label::before {
+    content: '';
+    position: absolute;
+    left: 0; /* Квадрат размещен слева от текста */
+    top: 50%;
+    transform: translateY(-50%); /* Центрирование квадрата относительно текста */
+    width: 20px;
+    height: 20px;
+    border: 2px solid #E5E2CF; /* Цвет рамки квадрата */
+    background-color: transparent;
+    border-radius: 4px; /* Закругление углов для квадрата */
+    box-sizing: border-box;
+}
+
+/* Эффект при выборе квадрата */
+.options input[type="radio"]:checked + label::before {
+    background-color: #E5E2CF; /* Цвет фона при выборе */
+    border: 2px solid #E5E2CF; /* Меняем цвет рамки на выбранном элементе */
+}
+
+/* Содержимое внутри квадрата при выборе */
+.options input[type="radio"]:checked + label::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: #292929; /* Цвет внутри квадрата (показывает, что элемент выбран) */
+}

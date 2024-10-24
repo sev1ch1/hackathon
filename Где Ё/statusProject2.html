@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Статус заказа</title>
+    <link rel="stylesheet" href="statusProject2.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="orderMenager.html" class="back-btn">&larr;</a>
+            <h1>Статус заказа</h1>
+        </header>
+
+        <div class="content-wrapper">
+            <div class="image-section">
+                <img src="./icon/status0.svg" alt="Image" class="image-placeholder">
+            </div>
+
+            <div class="comments-section">
+                <div class="comment" contenteditable="true"></div>
+                <div class="comment" contenteditable="true"></div>
+            </div>
+        </div>
+
+        <div class="contacts">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Имя</th>
+                        <th>Роль</th>
+                        <th>Связь</th>
+                        <th>Профиль</th>
+                    </tr>
+                </thead>
+
+            </table>
+            <div class="create-order"> 
+                <div class="order-icon">+</div>
+                <div class="order-text">Добавить заказчика</div>
+            </div>
+            <div class="create-order"> 
+                <div class="order-icon">+</div>
+                <div class="order-text">Назначить команду</div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.querySelectorAll('.comment').forEach(function(comment) {
+            comment.addEventListener('input', function() {
+                if (this.innerText.trim() !== '') {
+                    this.classList.add('has-content');
+                } else {
+                    this.classList.remove('has-content');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

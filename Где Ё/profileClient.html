@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный профиль</title>
+    <link rel="stylesheet" href="profileClient.css">
+    <style>
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+                <a href="#" class="header-item1">Личный профиль</a>
+                <a href="orders.html" class="header-item2">Заказы</a>
+            
+        </div>
+
+        <div class="profile-section">
+            <div class="profile-left">
+                <div class="photo-upload">
+                    <div class="photo-placeholder">
+                        <img src="./icon/profile.svg" alt="Иконка пользователя"> 
+                    </div>
+                    <div class="button-group">
+                        <button class="upload-button">Загрузить фото</button>
+                        <button class="save-button">Сохранить</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-right">
+                <div class="profile-form">
+                    <div class="contacts-title">Контакты</div> 
+                    <div class="form-group">
+                        <img src="./icon/settings.svg" alt="Иконка имени" class="icon" data-target="name"> 
+                        <input type="text" id="name" placeholder="Имя">
+                    </div>
+                    <div class="form-group">
+                        <img src="./icon/settings.svg" alt="Иконка фамилии" class="icon" data-target="surname"> 
+                        <input type="text" id="surname" placeholder="Фамилия">
+                    </div>
+
+                    <div class="company-title">Компания</div> 
+                    <div class="form-group">
+                        <img src="./icon/settings.svg" alt="Иконка компании" class="icon" data-target="company">
+                        <input type="text" id="company" placeholder="Название компании">
+                    </div>
+
+                    <div class="phone-title">Контакты</div> 
+                    <div class="form-group">
+                        <img src="./icon/settings.svg" alt="Иконка телефона" class="icon" data-target="phone"> 
+                        <input type="text" id="phone" placeholder="Номер телефона">
+                    </div>
+                    <div class="form-group">
+                        <img src="./icon/settings.svg" alt="Иконка почты" class="icon" data-target="email"> 
+                        <input type="email" id="email" placeholder="Электронная почта"> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.icon').forEach(icon => {
+            icon.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-target');
+                const inputField = document.getElementById(targetId);
+                
+                if (inputField) {
+                    inputField.select();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
