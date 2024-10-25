@@ -33,7 +33,7 @@
                     <label for="other">Только реклама</label>
                 </div>
             </div>
-
+            
             <div class="question">
                 <label for="company">Чем занимается Ваша компания?</label>
                 <textarea id="company" name="company" rows="3" placeholder="Напишите здесь"></textarea>
@@ -84,11 +84,16 @@
 
     <div id="modal" class="modal">
         <div class="modal-content">
-            <p>Форма отправлена!</p>
-            <button id="closeModalBtn">Закрыть</button>
+            <p>Спасибо, что прошли опрос!<br>Ваш запрос будет обработан в течение 3 дней.<br>Статус заказа будет виден в вашем личном кабинете</p>
+            <a href="profileClient.html">
+            <button id="closeModalBtn">Перейти в профиль</button>
+            </a>
         </div>
     </div>
+   
+    <div id="blurBackground" class="blur-background"></div>
 
-    <script src="script.js"></script>
+
+    <script src="questionnaire.js"></script>
 </body>
 </html>

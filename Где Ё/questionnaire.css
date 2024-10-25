@@ -108,38 +108,6 @@ button:hover {
     background-color: #d4d4bb;
 }
 
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(5px); /* Размытие фона */
-}
-
-.modal-content {
-    background-color: #292929;
-    color: #E5E2CF;
-    margin: 20% auto;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
-    text-align: center;
-}
-
-#closeModalBtn {
-    margin-top: 20px;
-    background-color: #E5E2CF;
-    color: #292929;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
 /* Скрываем стандартные радиокнопки */
 .options input[type="radio"] {
     display: none;
@@ -184,4 +152,58 @@ button:hover {
     width: 8px;
     height: 8px;
     background-color: #292929; /* Цвет внутри квадрата (показывает, что элемент выбран) */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #232C33;
+    padding: 30px;
+    border-radius: 10px;
+    z-index: 1002;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: #C2BCA2;
+    width: 400px;
+}
+
+.modal-content {
+    text-align: center;
+}
+
+.modal p {
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+
+/* Затемнение и размытие фона */
+.blur-background {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    z-index: 1001;
+}
+
+/* Стили для кнопки в модальном окне */
+.modal button {
+    width: 100%;
+    padding: 12px;
+    background-color: #232C33;
+    color: #C2BCA2;
+    font-size: 16px;
+    border: 1px solid#C2BCA2;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.modal button:hover {
+    background-color: #5f6872;
 }

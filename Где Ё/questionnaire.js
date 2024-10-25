@@ -1,32 +1,26 @@
 ﻿document.addEventListener('DOMContentLoaded', function () {
-    // Modal functionality
+    // Модальные элементы
     const submitBtn = document.getElementById('submitBtn');
     const modal = document.getElementById('modal');
+    const blurBackground = document.getElementById('blurBackground');
     const closeModalBtn = document.getElementById('closeModalBtn');
 
+    // Открытие модального окна и затемнение/размытие фона
     submitBtn.addEventListener('click', function () {
         modal.style.display = 'block';
+        blurBackground.style.display = 'block';
     });
 
+    // Закрытие модального окна
     closeModalBtn.addEventListener('click', function () {
         modal.style.display = 'none';
+        blurBackground.style.display = 'none';
     });
 
-    window.addEventListener('click', function (event) {
-        if (event.target === modal) {
-            modal.style.display = 'none';
-        }
-    });
-
-    // Change color of selected options
-    const options = document.querySelectorAll('input[type="radio"]');
-
-    options.forEach(option => {
-        option.addEventListener('change', function () {
-            options.forEach(opt => {
-                const label = opt.nextElementSibling;
-                label.style.backgroundColor = opt.checked ? '#555' : 'transparent';
-            });
-        });
+    // Закрытие модального окна по клику на затемненный фон
+    blurBackground.addEventListener('click', function () {
+        modal.style.display = 'none';
+        blurBackground.style.display = 'none';
     });
 });
+

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список клиентов</title>
+    <link rel="stylesheet" href="clientList.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="back-arrow" id="backArrow">←</div>
+            <h1 class="title">Список клиентов</h1>
+        </header>
+        <div class="search-sort">
+            <input type="text" class="search" placeholder="Поиск">
+            <div class="sort">
+                <label for="sort-select">Сортировка по:</label>
+                <select id="sort-select">
+                    <option value="-">-</option>
+                </select>
+            </div>
+        </div>
+        <div class="client-list">
+            <div class="client-item">
+                <div class="client-info">
+                    <p class="client-name">Дмитрий Накиев</p>
+                    <div class="client-icons">
+                        <span class="icon">💬</span>
+                        <span class="icon">📞</span>
+                    </div>
+                </div>
+                <a href="checkClient.html">
+                    <button class="open-button">Открыть</button>
+                </a>
+            </div>
+
+            <div class="client-item">
+                <div class="client-info">
+                    <p class="client-name">Дмитрий Накиев</p>
+                    <div class="client-icons">
+                        <span class="icon">💬</span>
+                        <span class="icon">📞</span>
+                    </div>
+                </div>
+                <a href="checkClient.html">
+                    <button class="open-button">Открыть</button>
+                </a>
+            </div>
+
+            <div class="client-item">
+                <div class="client-info">
+                    <p class="client-name">Дмитрий Накиев</p>
+                    <div class="client-icons">
+                        <span class="icon">💬</span>
+                        <span class="icon">📞</span>
+                    </div>
+                </div>
+                <a href="checkClient.html">
+                    <button class="open-button">Открыть</button>
+                </a>
+            </div>
+
+            <div class="client-item">
+                <div class="client-info">
+                    <p class="client-name">Дмитрий Накиев</p>
+                    <div class="client-icons">
+                        <span class="icon">💬</span>
+                        <span class="icon">📞</span>
+                    </div>
+                </div>
+                <a href="checkClient.html">
+                    <button class="open-button">Открыть</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Получаем элемент с id "backArrow"
+        document.getElementById('backArrow').addEventListener('click', function() {
+            // Перенаправляем пользователя на страницу profileAdmin.html
+            window.location.href = 'profileAdmin.html';
+        });
+    </script>
+</body>
+</html>
